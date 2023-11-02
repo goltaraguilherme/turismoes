@@ -32,7 +32,7 @@ export function HeaderHome(){
         return null
 
     return(
-        <SafeAreaView style = {styles.container}>
+        <SafeAreaView>
             <View style={styles.headerContainer}>
                 <Image source={fotoImg} />
                 <View style={styles.textContainer}>
@@ -52,9 +52,6 @@ export function HeaderHome(){
 }
 
 const styles = StyleSheet.create({
-    container: {
-        flex: 1,
-    },
     headerContainer: {
         flexDirection: 'row',
         gap: 20,
