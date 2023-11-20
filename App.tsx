@@ -5,11 +5,12 @@ import { Home } from './src/screens/home';
 import { ChatPref } from './src/screens/ChatPref';
 import { ChatCompa } from './src/screens/ChatComp';
 import { ChatD } from './src/screens/ChatDias';
+import { Fav } from './src/screens/fav';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <ChatPref/>
+      <Fav/>
       <StatusBar style="auto" />
     </View>
   );
