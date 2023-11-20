@@ -6,11 +6,12 @@ import { ChatPref } from './src/screens/ChatPref';
 import { ChatCompa } from './src/screens/ChatComp';
 import { ChatD } from './src/screens/ChatDias';
 import { Fav } from './src/screens/fav';
+import { MyItin } from './src/screens/MyItineraries';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <Fav/>
+      <MyItin/>
       <StatusBar style="auto" />
     </View>
   );
