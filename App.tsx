@@ -7,11 +7,12 @@ import { ChatCompa } from './src/screens/ChatComp';
 import { ChatD } from './src/screens/ChatDias';
 import { Fav } from './src/screens/fav';
 import { MyItin } from './src/screens/MyItineraries';
+import { SeeMyItin } from './src/screens/SeeMyItin';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <MyItin/>
+      <SeeMyItin/>
       <StatusBar style="auto" />
     </View>
   );
