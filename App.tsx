@@ -8,11 +8,13 @@ import { ChatD } from './src/screens/ChatDias';
 import { Fav } from './src/screens/fav';
 import { MyItin } from './src/screens/MyItineraries';
 import { SeeMyItin } from './src/screens/SeeMyItin';
+import { Discover } from './src/screens/Discover';
+import { DiscWithFilter } from './src/screens/DiscoverWFilter';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <SeeMyItin/>
+      <DiscWithFilter/>
       <StatusBar style="auto" />
     </View>
   );

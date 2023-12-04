@@ -1,3 +1,6 @@
+// Melhorar Formatação
+// Falta a bolinha rosa na imagem do Filtro Aplicado
+
 import React from 'react';
 import {
     View,
@@ -23,13 +26,14 @@ const seta = require("../assets/Voltar.png");
 const starIcon = require("../assets/star.png");
 const beachPhoto = require("../assets/praia.png");
 const edit = require("../assets/edit.png");
+const filter1 = require("../assets/FilterOne.png");
 
 const windowHeight = Dimensions.get('window').height;
 const windowWidth = Dimensions.get('window').width;
 const windowFontScale = Dimensions.get('window').fontScale;
 
 
-export function SeeMyItin(){
+export function DiscWithFilter(){
     let [fontsloaded] = useFonts({
         Montserrat_500Medium,
         Montserrat_700Bold
@@ -47,15 +51,26 @@ export function SeeMyItin(){
                         style={styles.setaImg}
                     />
                 </View>  
-                <Text style={[styles.title, {color: colors['gray-700'], textAlign: 'center'}]}>
-                Criado ontem às 09:50
+                <Text style={[styles.title, {color: colors['gray-700'], textAlign: 'center', marginLeft: 50, marginTop: 5}]}>
+                Descobrir
                 </Text>
+                <View style={styles.filterContainer}>
+                    <Image
+                        source={filter1}
+                        style={styles.filterImg}
+                    />
+                </View>  
             </TouchableOpacity>
+            <View style={{ flexDirection: 'row', alignItems: 'center', marginHorizontal: 19 }}>
+                <Text style={[{fontFamily: "Montserrat_700Bold", textAlign: 'center', marginRight: 5, fontSize: 1/windowFontScale*19}]}> 
+                    Filtro Aplicado
+                </Text>
+                <Text style={[{fontFamily: "Montserrat_500Medium", fontSize: 1/windowFontScale*19}]}> 
+                (10 Resultados)
+                </Text>
+            </View>
             <ScrollView style={{maxHeight: windowHeight*0.8}}>
                 <View>
-                    <Text style={[{fontFamily: "Montserrat_700Bold", textAlign: 'center', marginRight: 270, fontSize: 1/windowFontScale*20}]}>
-                    Dia 01
-                    </Text>
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}> 
                             <Text style={{fontFamily: "Montserrat_700Bold", color: "white", fontSize: 1/windowFontScale*18}}>
@@ -78,7 +93,6 @@ export function SeeMyItin(){
                         </View>
                     </ImageBackground>
 
-                    
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}>
                             <Text style={{fontFamily: "Montserrat_700Bold", color: "white", fontSize: 1/windowFontScale*18}}>
@@ -100,13 +114,7 @@ export function SeeMyItin(){
                             </View>
                         </View>
                     </ImageBackground>
-                </View>
 
-
-                <View style={[{marginTop: 30}]}>
-                    <Text style={[{fontFamily: "Montserrat_700Bold", textAlign: 'center', marginRight: 270, fontSize: 1/windowFontScale*20}]}>
-                    Dia 02
-                    </Text>
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}>
                             <Text style={{fontFamily: "Montserrat_700Bold", color: "white", fontSize: 1/windowFontScale*18}}>
@@ -128,7 +136,6 @@ export function SeeMyItin(){
                             </View>
                         </View>
                     </ImageBackground>
-
 
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}>
@@ -151,13 +158,7 @@ export function SeeMyItin(){
                             </View>
                         </View>
                     </ImageBackground>
-                </View>
 
-
-                <View style={[{marginTop: 30}]}>
-                    <Text style={[{fontFamily: "Montserrat_700Bold", textAlign: 'center', marginRight: 270, fontSize: 1/windowFontScale*20}]}>
-                    Dia 03
-                    </Text>
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}>
                             <Text style={{fontFamily: "Montserrat_700Bold", color: "white", fontSize: 1/windowFontScale*18}}>
@@ -179,7 +180,6 @@ export function SeeMyItin(){
                             </View>
                         </View>
                     </ImageBackground>
-
 
                     <ImageBackground source={beachPhoto} style={styles.cardTrend} imageStyle={{borderRadius: 15}}>
                         <View style={styles.textCardContainer}>
@@ -239,6 +239,17 @@ const styles = StyleSheet.create({
     setaImg: {    
         width: windowWidth*0.075,
         height: windowHeight*0.042,
+    },
+    filterImg: {    
+        width: windowWidth*0.075,
+        height: windowHeight*0.042,
+    },
+    filterContainer: {
+        height: windowHeight*0.07,
+        width: windowWidth*0.5,
+        justifyContent: 'center',
+        alignItems: 'center',
+        backgroundColor: "#ffff"
     },
     setaContainer: {
         height: windowHeight*0.07,
