@@ -1,20 +1,13 @@
 import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { Dimensions, StyleSheet, Text, View } from 'react-native';
-import { Home } from './src/screens/home';
-import { ChatPref } from './src/screens/ChatPref';
-import { ChatCompa } from './src/screens/ChatComp';
-import { ChatD } from './src/screens/ChatDias';
-import { Fav } from './src/screens/fav';
-import { MyItin } from './src/screens/MyItineraries';
-import { SeeMyItin } from './src/screens/SeeMyItin';
-import { Discover } from './src/screens/Discover';
-import { DiscWithFilter } from './src/screens/DiscoverWFilter';
+import StartPage from './app/';
+import StackLayout from './app/_layout';
 
 export default function App() {
   return (
     <View style={styles.container}>
-      <DiscWithFilter/>
+      <StartPage/>
       <StatusBar style="auto" />
     </View>
   );

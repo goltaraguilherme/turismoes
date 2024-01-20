@@ -55,7 +55,6 @@ const styles = StyleSheet.create({
     headerContainer: {
         flexDirection: 'row',
         gap: 20,
-        marginTop: 30,
         alignItems: 'center',
     },
     textContainer: {
